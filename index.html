@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adarsh Sudheer — Researcher & Developer</title>
+<meta name="description" content="Adarsh Sudheer — High School Researcher & Software Developer. Multimodal AI, adversarial machine learning, and systems architecture." />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
+        },
+        colors: {
+          ink: '#1a1e29',
+          accent: {
+            DEFAULT: '#28377e',
+            dark: '#1c2860',
+            light: '#eef0f8',
+          },
+          gold: '#a9822f',
+          panel: '#f7f7f9',
+        },
+        maxWidth: {
+          content: '54rem',
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui; }
+
+  ::selection { background: #28377e; color: #ffffff; }
+
+  .label {
+    letter-spacing: 0.14em;
+  }
+
+  a.nav-link { position: relative; }
+  a.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -5px;
+    height: 1.5px;
+    background: #a9822f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+  a.nav-link:hover::after, a.nav-link.active::after { transform: scaleX(1); }
+
+  .card {
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover {
+    box-shadow: 0 10px 30px -18px rgba(26,30,41,0.25);
+    border-color: #d7d9e2;
+  }
+
+  .chip { transition: background-color 0.2s ease, border-color 0.2s ease; }
+  .chip:hover { background: #eef0f8; border-color: #c4cae4; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  :focus-visible { outline: 2px solid #28377e; outline-offset: 2px; }
+
+  .node { animation: pulse 4.2s ease-in-out infinite; }
+  .node:nth-child(2) { animation-delay: .6s; }
+  .node:nth-child(3) { animation-delay: 1.3s; }
+  .node:nth-child(4) { animation-delay: 2s; }
+  .node:nth-child(5) { animation-delay: 1s; }
+  @keyframes pulse {
+    0%, 100% { opacity: .3; }
+    50% { opacity: .85; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card, a.nav-link::after, .chip, .reveal { transition: none; }
+    .reveal { opacity: 1; transform: none; }
+    .node { animation: none; opacity: .6; }
+  }
+</style>
+</head>
+
+<body class="bg-white text-slate-700 antialiased">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display font-semibold tracking-tight text-ink text-[17px]">Adarsh Sudheer</a>
+      <ul class="hidden sm:flex items-center gap-9 text-[13px] font-medium text-slate-600 label uppercase">
+        <li><a href="#research" class="nav-link hover:text-ink">Research</a></li>
+        <li><a href="#projects" class="nav-link hover:text-ink">Projects</a></li>
+        <li><a href="#skills" class="nav-link hover:text-ink">Skills</a></li>
+        <li><a href="#contact" class="nav-link hover:text-ink">Contact</a></li>
+      </ul>
+      <a href="#contact" class="sm:hidden text-[13px] font-medium text-accent label uppercase">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="relative overflow-hidden">
+    <svg class="absolute -top-10 right-[-40px] w-[440px] h-[440px] pointer-events-none hidden md:block" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+      <g stroke="#28377e" stroke-opacity="0.08" stroke-width="1.1">
+        <line x1="80" y1="70" x2="220" y2="130"/>
+        <line x1="220" y1="130" x2="340" y2="90"/>
+        <line x1="220" y1="130" x2="260" y2="240"/>
+        <line x1="80" y1="70" x2="140" y2="210"/>
+        <line x1="140" y1="210" x2="260" y2="240"/>
+        <line x1="260" y1="240" x2="360" y2="290"/>
+      </g>
+      <circle class="node" cx="80" cy="70" r="2.5" fill="#a9822f"/>
+      <circle class="node" cx="220" cy="130" r="2.5" fill="#28377e"/>
+      <circle class="node" cx="340" cy="90" r="2.5" fill="#28377e"/>
+      <circle class="node" cx="140" cy="210" r="2.5" fill="#28377e"/>
+      <circle class="node" cx="260" cy="240" r="2.5" fill="#a9822f"/>
+      <circle class="node" cx="360" cy="290" r="2.5" fill="#28377e"/>
+    </svg>
+
+    <div class="max-w-content mx-auto px-6 pt-16 pb-14 sm:pt-24 sm:pb-24 relative">
+      <div class="flex flex-col-reverse sm:flex-row sm:items-center gap-10 sm:gap-16">
+        <div class="flex-1">
+          <p class="label text-[12px] uppercase text-gold font-semibold mb-4">High School Researcher &amp; Software Developer</p>
+          <h1 class="font-display text-5xl sm:text-6xl font-semibold tracking-tight text-ink leading-[1.05]">
+            Adarsh Sudheer
+          </h1>
+          <div class="w-14 h-[3px] bg-accent rounded-full mt-6 mb-6"></div>
+          <p class="text-[16.5px] leading-relaxed text-slate-600 max-w-[42rem]">
+            I am a junior at Cupertino High School focusing on <span class="text-ink font-medium">multimodal AI</span>, <span class="text-ink font-medium">adversarial machine learning</span>, and <span class="text-ink font-medium">systems architecture</span>. I am actively involved in research exploring late-layer prior dominance in LLMs and deep structural perturbations for facial recognition. Outside of coding, I spend my time hiking and working out.
+          </p>
+
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[14px] font-medium">
+            <a href="https://github.com/AdarshSudheer09" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-600 hover:text-accent transition-colors">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.55-3.88-1.55-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.77.12 3.06.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.25 5.69.42.36.78 1.07.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.21.67.8.56A10.53 10.53 0 0 0 23.5 12.03C23.5 5.66 18.35.5 12 .5z"/></svg>
+              AdarshSudheer09
+            </a>
+            <a href="mailto:adarshsudheer09@gmail.com" class="inline-flex items-center gap-2 text-slate-600 hover:text-accent transition-colors">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Z"/><path d="m4 6.5 8 6 8-6"/></svg>
+              adarshsudheer09@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/adarsh-sudheer-67b8b726a/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-600 hover:text-accent transition-colors">
+              <svg class="w-[17px] h-[17px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <div class="shrink-0 self-center sm:self-start">
+          <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-accent-light border border-slate-200 flex items-center justify-center overflow-hidden">
+            <span class="font-display text-3xl sm:text-4xl text-accent/70 font-medium">AS</span>
+          </div>
+          <p class="text-center text-[10.5px] text-slate-400 mt-2 tracking-wide uppercase">Photo placeholder</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="max-w-content mx-auto px-6 py-16 sm:py-20 reveal">
+    <div class="flex items-baseline gap-4 mb-10">
+      <span class="label text-gold text-[12px] font-semibold">01</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-ink">Research Experience</h2>
+    </div>
+
+    <div class="space-y-6">
+
+      <article class="card bg-panel border border-slate-200 rounded-lg px-7 py-7 sm:px-9 sm:py-8">
+        <h3 class="font-display text-xl font-semibold text-ink">Multimodal AI Researcher</h3>
+        <p class="text-[13px] text-slate-500 mt-1.5 mb-4">Principal Investigator: Ruizhe Li &nbsp;·&nbsp; Mentor: Arjun</p>
+        <p class="text-[15.5px] leading-relaxed text-slate-600">
+          Investigating audio-visual conflict as a compositional generalization test for AV-LLMs. Identified <span class="italic text-ink">prior dominance</span>, a failure mode characterized by late-layer commitment to an internally preferred answer pattern that is weakly grounded in conflicting inputs.
+        </p>
+        <div class="mt-5">
+          <a href="https://github.com/AdarshSudheer09/AVHBench-dmai" target="_blank" rel="noopener noreferrer" class="text-[13.5px] font-medium text-accent hover:text-accent-dark underline underline-offset-4 decoration-slate-300 hover:decoration-accent-dark">View repository ↗</a>
+        </div>
+      </article>
+
+      <article class="card bg-panel border border-slate-200 rounded-lg px-7 py-7 sm:px-9 sm:py-8">
+        <h3 class="font-display text-xl font-semibold text-ink">Researcher, Adv-TGD Latent Face Diffusion</h3>
+        <p class="text-[13px] text-slate-500 mt-1.5 mb-4">Advisor: Professor Nima Karimian, University of South Florida</p>
+        <p class="text-[15.5px] leading-relaxed text-slate-600">
+          Developed an optimized, visually grounded adversarial generation framework designed to produce high-fidelity impersonations. Reformulated the adversarial attack as a principled constrained optimization problem solved via Lagrangian dual ascent, and engineered a Salience-Guided Semantic Mask pipeline.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-content mx-auto px-6 py-16 sm:py-20 reveal">
+    <div class="flex items-baseline gap-4 mb-10">
+      <span class="label text-gold text-[12px] font-semibold">02</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-ink">Engineering &amp; Projects</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6">
+
+      <article class="card bg-panel border border-slate-200 rounded-lg px-7 py-7 flex flex-col">
+        <h3 class="font-display text-lg font-semibold text-ink mb-2">Carom Referee</h3>
+        <p class="text-[15px] leading-relaxed text-slate-600 flex-1">
+          Engineered a YOLOv12-based ML model to referee a carom game from a live video feed. Processes real-time computer vision to track physical game states, calculates scores for two teams, and renders live on-screen updates.
+        </p>
+        <a href="https://github.com/AdarshSudheer09/carom-referee" target="_blank" rel="noopener noreferrer" class="mt-5 text-[13.5px] font-medium text-accent hover:text-accent-dark underline underline-offset-4 decoration-slate-300 hover:decoration-accent-dark">View repository ↗</a>
+      </article>
+
+      <article class="card bg-panel border border-slate-200 rounded-lg px-7 py-7 flex flex-col">
+        <h3 class="font-display text-lg font-semibold text-ink mb-2">Software Lead, FRC Team 2473 (Goldstrikers)</h3>
+        <p class="text-[15px] leading-relaxed text-slate-600 flex-1">
+          Architecting control systems, vision processing pipelines, and core robot software.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-content mx-auto px-6 py-16 sm:py-20 reveal">
+    <div class="flex items-baseline gap-4 mb-10">
+      <span class="label text-gold text-[12px] font-semibold">03</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-ink">Technical Skills</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-10">
+      <div>
+        <h3 class="label text-[11.5px] uppercase tracking-wider font-semibold text-slate-400 mb-3.5">Languages</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Python</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">C++</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Java</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Swift</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">TypeScript</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">JavaScript</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="label text-[11.5px] uppercase tracking-wider font-semibold text-slate-400 mb-3.5">Frameworks &amp; AI</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">PyTorch</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">OpenCV</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">YOLO</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">React</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">React Native</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="label text-[11.5px] uppercase tracking-wider font-semibold text-slate-400 mb-3.5">Core Competencies</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Adversarial ML</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Multimodal Models</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Computer Vision</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">iOS Development</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Linux</span>
+          <span class="chip px-3 py-1.5 rounded-md border border-slate-200 text-[13px] text-slate-700">Git</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <section id="contact" class="border-t border-slate-200 bg-ink">
+    <div class="max-w-content mx-auto px-6 py-16 sm:py-20 text-center">
+      <p class="label text-gold text-[12px] uppercase font-semibold mb-3">Get in Touch</p>
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white mb-3">Let's connect</h2>
+      <p class="text-[15px] text-slate-400 max-w-md mx-auto mb-7">
+        Open to research opportunities, lab collaborations, and engineering projects.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[14px] font-medium">
+        <a href="mailto:adarshsudheer09@gmail.com" class="text-white hover:text-gold transition-colors">adarshsudheer09@gmail.com</a>
+        <a href="https://github.com/AdarshSudheer09" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/adarsh-sudheer-67b8b726a/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gold transition-colors">LinkedIn</a>
+      </div>
+      <p class="text-[12px] text-slate-500 mt-10">© 2026 Adarsh Sudheer</p>
+    </div>
+  </section>
+
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealEls.forEach(el => io.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('in'));
+    }
+
+    const sections = ['research','projects','skills','contact'].map(id => document.getElementById(id));
+    const links = document.querySelectorAll('.nav-link');
+    if ('IntersectionObserver' in window) {
+      const navIo = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach(s => s && navIo.observe(s));
+    }
+  </script>
+
+</body>
+</html>
